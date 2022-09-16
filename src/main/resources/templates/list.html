@@ -11,6 +11,9 @@
     <h1 th:text="${appName}" style="color: green">Default app name</h1>
     <hr/>
     <div class="content">
+        <a class="btn btn-primary"
+           href="/new"
+        >Создать новый пост</a>
         <div class="row article" th:each="post : ${posts}">
             <div class="col-md-10 col-md-offset-1">
                 <h3 th:text="${'Пост от ' + post.creationDate}">Пост от 2019.09.08</h3>
