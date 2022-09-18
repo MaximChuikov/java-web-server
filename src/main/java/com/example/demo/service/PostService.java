@@ -10,19 +10,17 @@ import java.util.Date;
 @Service
 public class PostService {
     private final ArrayList<Post> posts = new ArrayList<>();
+    private long counter = 0L;
     public PostService(){
-        Post post1 = new Post("текст 1", new Date());
-        Post post2 = new Post("текст 2", new Date());
-        Post post3 = new Post("текст 3", new Date());
-
-        posts.add(post1);
-        posts.add(post2);
-        posts.add(post3);
+        create("ФЫОВтло ВФЫтлТ ВЫФТл");
+        create("ФЫОВтло ВФЫтлТ ВЫФТл");
+        create("ФЫОВтло ВФЫтлТ ВЫФТл");
     }
-    public ArrayList listAllPosts() {
+    public ArrayList<Post> listAllPosts() {
         return posts;
     }
     public void create(String text) {
-        posts.add(new Post(text, new Date()));
+        posts.add(new Post(counter, text, new Date()));
+        counter++;
     }
 }
