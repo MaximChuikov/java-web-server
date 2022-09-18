@@ -7,9 +7,9 @@ public class Post {
     Integer likes;
     private final Date creationDate;
 
-    public Post(String text, Integer likes, Date creationDate) {
+    public Post(String text, Date creationDate) {
         this.text = text;
-        this.likes = likes;
+        this.likes = 0;
         this.creationDate = creationDate;
     }
 
